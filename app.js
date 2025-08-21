@@ -1,14 +1,13 @@
   const hour = document.querySelector("#hour");
   const minute =document.querySelector("#minute");
   const second = document.querySelector("#second");
-
+let startWatch;
+let count = 0;
 function startFnc(){
- let count = 0
-  setInterval(function(){
-  
-   
+count++;
+   startWatch = setInterval(function(){
 if(count  > 9){
-  second.innerHTML = count++ 
+  second.innerHTML = count++
 }
 else{
   second.innerHTML = "0" + count++
@@ -18,5 +17,13 @@ else{
 }
 function stopFnc(){
   console.log("stop watch");
-clearInterval(setInterval);
+clearInterval(startWatch);
+
+}
+
+function resetFnc(){
+  console.log("Reset watch");
+count = 0;
+ 
+
 }
