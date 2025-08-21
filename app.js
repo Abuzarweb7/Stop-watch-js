@@ -1,18 +1,24 @@
-  const hour = document.querySelector("#hour");
+  const hours = document.querySelector("#hour");
   const minute =document.querySelector("#minute");
   const second = document.querySelector("#second");
 let startWatch;
-let count = 0;
+let sec = 0;
+let min = 0 ;
+let hour = 0 ;
 function startFnc(){
-count++;
+ 
    startWatch = setInterval(function(){
-if(count  > 9){
-  second.innerHTML = count++
+if(sec == 60){
+  sec = 0;
+  min++;
 }
-else{
-  second.innerHTML = "0" + count++
+if(min == 60){
+  min = 0;
+  hour++;
 }
 
+
+ 
   },1000)
 }
 function stopFnc(){
@@ -27,3 +33,7 @@ count = 0;
  
 
 }
+
+
+
+
