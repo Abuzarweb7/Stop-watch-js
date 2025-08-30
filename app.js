@@ -3,7 +3,7 @@ let hours = document.querySelector("#hour");
 let minute = document.querySelector("#minute");
 let second = document.querySelector("#second");
 
-let satrt;
+let satrtWatch;
 
 let sec = 0;
 let min = 0;
@@ -33,7 +33,7 @@ minute.innerHTML = "0" +  min;
 } else{
 minute.innerHTML = min;
 }
-if(hur < 10){
+if(hour < 10){
 hour.innerHTML = "0" +  hour;
 } else{
     hours.innerHTML = hour;
@@ -47,12 +47,12 @@ hour.innerHTML = "0" +  hour;
 
 
 function stopFnc(){
-clearInterval (satrt)
+clearInterval (satrtWatch)
 console.log("stop watch");
 
 }
 function resetFnc(){
-    clearInterval(satrt);
+    clearInterval(satrtWatch);
     sec = 0;
     min = 0;
     hour = 0;
